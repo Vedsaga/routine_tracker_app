@@ -1,5 +1,16 @@
 part of 'route.dart';
 
+class AppRoute {
+  static GoRouter get instance {
+    return GoRouter(
+      initialLocation: AppRoutePath.initial,
+      debugLogDiagnostics: true,
+      navigatorKey: SingletonInstance.parentNavigatorKey,
+      routes: [$initialScreenRoute, $homeStatefulShellRoute],
+    );
+  }
+}
+
 ///-------------------- Initial Route-----------------------------///
 @TypedGoRoute<InitialScreenRoute>(
   path: AppRoutePath.initial,
