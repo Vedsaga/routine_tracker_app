@@ -1,6 +1,6 @@
+import 'package:daily_routine_tracker/l10n/l10n.dart';
+import 'package:daily_routine_tracker/modules/modules.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/counter/counter.dart';
-import 'package:my_app/l10n/l10n.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -16,7 +16,7 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: const ProfileScreen(),
     );
   }
 }
