@@ -10,5 +10,6 @@ part 'app_route_path.dart';
 part 'app_router.dart';
 part 'scaffold_with_navigation_bar.dart';
 part 'scaffold_with_nested_navigation.dart';
+part 'route_typedef.dart';
 part 'route.static_const.dart';
 part 'route.g.dart';
