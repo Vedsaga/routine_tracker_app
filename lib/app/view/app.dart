@@ -1,22 +1,25 @@
+import 'package:daily_routine_tracker/common/common.dart';
 import 'package:daily_routine_tracker/l10n/l10n.dart';
-import 'package:daily_routine_tracker/modules/modules.dart';
+import 'package:daily_routine_tracker/route/route.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       theme: ThemeData(
-        appBarTheme: AppBarTheme(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        ),
+        colorScheme: const ColorScheme.highContrastLight(),
         useMaterial3: true,
+        textTheme: GoogleFonts.nunitoTextTheme(),
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const ProfileScreen(),
+      scaffoldMessengerKey: SingletonInstance.scaffoldMessengerKey,
+      title: 'Daily Routine Tracker',
+      routerConfig: AppRoute.instance,
     );
   }
 }
