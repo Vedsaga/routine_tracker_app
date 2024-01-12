@@ -35,7 +35,7 @@ dependencies:
 
 dev_dependencies:
   bloc_test: ^9.1.5
-  build_runner: ^2.4.7
+  build_runner: ^2.4.8
   const_to_enum_generator:
     git:
       url: https://github.com/Vedsaga/const_to_enum_generator.git
